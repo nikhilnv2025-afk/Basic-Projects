@@ -5,9 +5,9 @@ services:
     image: postgres:latest
     container_name: book-postgres
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: secret
-      POSTGRES_DB: bookdb
+      POSTGRES_USER: ${DB_PASSWORD}
+      POSTGRES_PASSWORD: ${DB_USER}
+      POSTGRES_DB: ${DB_NAME}
     ports:
       - "5432:5432"
     restart: always
