@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  book-postgres:
+    image: postgres:latest
+    container_name: book-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: bookdb
+    ports:
+      - "5432:5432"
+    restart: always
